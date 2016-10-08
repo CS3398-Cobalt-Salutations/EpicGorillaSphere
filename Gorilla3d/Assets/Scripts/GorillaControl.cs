@@ -22,6 +22,8 @@ public class GorillaControl : MonoBehaviour {
         float moveHoriz = Input.GetAxis ("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
+        
+
         Vector3 movement = new Vector3(moveHoriz, 0.0f, moveVertical);
         rb.AddForce(movement * speed);
         

@@ -4,7 +4,7 @@ using System.Collections;
 public class CollisionTests : MonoBehaviour {
     
     private BoxCollider bc;
-    private p
+    
     
     
 
