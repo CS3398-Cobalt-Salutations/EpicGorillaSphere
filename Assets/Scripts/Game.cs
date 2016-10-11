@@ -2,7 +2,7 @@
 using System.Collections;
 
 //Allows Unity to save variables listed in this script
-[Sytem.Serializable]
+[System.Serializable]
 public class Game {
 
 
