@@ -1,22 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SaveAndLoad : MonoBehaviour {
+public static class SaveAndLoad {
 
-	public void SaveState()
+	public static void SaveState(Vector3 state)
 	{
-		PlayerPrefs.SetFloat ("PosX", transform.position.x);
-		PlayerPrefs.SetFloat ("PosY", transform.position.y);
-		PlayerPrefs.SetFloat ("PosZ", transform.position.z);
+		PlayerPrefs.SetFloat ("PosX", state.x);
+		PlayerPrefs.SetFloat ("PosY", state.y);
+		PlayerPrefs.SetFloat ("PosZ", state.z);
 	}
 
-	public void LoadState()
+	public static Vector3 LoadState()
 	{
-		float x = PlayerPrefs.GetFloat ("PosX");
+        float x = PlayerPrefs.GetFloat ("PosX");
 		float y = PlayerPrefs.GetFloat ("PosY");
 		float z = PlayerPrefs.GetFloat ("PosZ");
 
-		transform.position = new Vector3 (x, y, z);
+		return new Vector3 (x, y, z);
 	}
 
 }
