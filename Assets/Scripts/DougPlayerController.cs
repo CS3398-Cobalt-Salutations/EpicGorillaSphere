@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour
+public class DougPlayerController : MonoBehaviour
 {
 	public float speed;
 	private Rigidbody rb;
@@ -26,17 +26,20 @@ public class PlayerController : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Checkpoint") 
 		{
-			checkpoint = transform.position;
+			//checkpoint = transform.position;
+            SaveAndLoad.SaveState(transform.position);
 		}
 			
 		else if(other.gameObject.tag == "Hazard") 
 		{
-			transform.position = checkpoint;
+            transform.position = SaveAndLoad.LoadState();
+			//transform.position = checkpoint;
 		}
 
 		else if (other.gameObject.tag == "Fallout") 
 		{
-			transform.position = checkpoint;
+            transform.position = SaveAndLoad.LoadState();
+			//transform.position = checkpoint;
 		} 
 	}
 }
