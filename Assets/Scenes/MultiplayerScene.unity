@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692558, g: 0.49678743, b: 0.57508624, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -149,8 +149,8 @@ MonoBehaviour:
   m_OfflineScene: 
   m_OnlineScene: 
   m_SpawnPrefabs:
-  - {fileID: 1000011338932152, guid: 041d619ad0b83234e9072c18bb9a0140, type: 2}
-  - {fileID: 1000014166914820, guid: 1e2f62c343a47f5418be0048836d5c91, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
@@ -361,8 +361,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26af32e693b9e1d4eb6a5f526ef4428b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1000014166914820, guid: 1e2f62c343a47f5418be0048836d5c91,
-    type: 2}
+  m_LastSendTime: 0
+  m_SyncVarGuard: 0
+  m_MyView: {fileID: 0}
+  enemyPrefab: {fileID: 3, guid: 1e2f62c343a47f5418be0048836d5c91, type: 2}
   numEnemies: 4
 --- !u!114 &1017815386
 MonoBehaviour:
