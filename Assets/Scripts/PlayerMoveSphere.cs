@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PlayerMoveSphere : MonoBehaviour {
 
 	public float speed;
 	public static int keyCount;
+	public static int count;
 	public Text countText;
 	public Text winText;
 
 	private Rigidbody rb;
-	private int count;
 
 	void Start ()
 	{
@@ -36,6 +37,12 @@ public class PlayerMoveSphere : MonoBehaviour {
 			other.gameObject.SetActive (false);
 			count = count + 1;
 			SetCountText ();
+			if (count >= 5) 
+			{
+				SceneManager.LoadScene ("WinScreen", LoadSceneMode.Additive);
+
+			}
+
 		}
     }
 	void SetCountText()
