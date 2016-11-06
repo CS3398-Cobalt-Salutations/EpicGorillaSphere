@@ -40,9 +40,26 @@ public class PlayerMoveSphere : MonoBehaviour {
 			if (count >= 5) 
 			{
 				SceneManager.LoadScene ("WinScreen", LoadSceneMode.Additive);
-
 			}
 
+		}
+		if (other.gameObject.CompareTag ("Space Object"))  
+		{
+			other.gameObject.SetActive (false);
+			float moveHorizontal = Input.GetAxis ("Horizontal");
+			float moveVertical = Input.GetAxis ("Vertical");
+
+			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+			rb.AddExplosionForce (10, movement, 10); 
+		}
+		if (other.gameObject.CompareTag ("Speed Boost"))
+		{
+			other.gameObject.SetActive (false);
+			float moveHorizontal = Input.GetAxis ("Horizontal");
+			float moveVertical = Input.GetAxis ("Vertical");
+
+			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+			rb.AddForce (movement * speed * 20);
 		}
     }
 	void SetCountText()
