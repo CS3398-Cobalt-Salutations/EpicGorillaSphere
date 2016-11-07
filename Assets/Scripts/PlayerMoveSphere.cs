@@ -2,20 +2,24 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System;
 
-public class PlayerMoveSphere : MonoBehaviour {
-
+[RequireComponent(typeof(Rigidbody))]
+public class PlayerMoveSphere : MonoBehaviour
+{
 	public float speed;
 	public static int keyCount;
 	public static int count;
 	public Text countText;
 	public Text winText;
 
+    private IMovement controller;
 	private Rigidbody rb;
 
 	void Start ()
 	{
-		rb = GetComponent<Rigidbody> ();
+        controller = (IMovement)GetComponent(typeof(BaseMovement));
+		rb = GetComponent<Rigidbody>();
 		count = 0;
 		keyCount = 0;
 		SetCountText ();
@@ -23,26 +27,24 @@ public class PlayerMoveSphere : MonoBehaviour {
 	}
 	void FixedUpdate ()
 	{
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
+        //float moveHorizontal = Input.GetAxis ("Horizontal");
+        //float moveVertical = Input.GetAxis ("Vertical");
 
-		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+        //Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+
+        Vector3 movement = controller.CalculateMovement();
 
 		rb.AddForce (movement * speed);
 	}
+    void Update()
+    {
+        if (count >= 5)
+        {
+            SceneManager.LoadScene("WinScreen", LoadSceneMode.Additive);
+        }
+    }
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.gameObject.CompareTag ("Collectible")) 
-		{
-			other.gameObject.SetActive (false);
-			count = count + 1;
-			SetCountText ();
-			if (count >= 5) 
-			{
-				SceneManager.LoadScene ("WinScreen", LoadSceneMode.Additive);
-			}
-
-		}
 		if (other.gameObject.CompareTag ("Space Object"))  
 		{
 			other.gameObject.SetActive (false);
@@ -51,15 +53,6 @@ public class PlayerMoveSphere : MonoBehaviour {
 
 			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 			rb.AddExplosionForce (10, movement, 10); 
-		}
-		if (other.gameObject.CompareTag ("Speed Boost"))
-		{
-			other.gameObject.SetActive (false);
-			float moveHorizontal = Input.GetAxis ("Horizontal");
-			float moveVertical = Input.GetAxis ("Vertical");
-
-			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-			rb.AddForce (movement * speed * 20);
 		}
     }
 	void SetCountText()
