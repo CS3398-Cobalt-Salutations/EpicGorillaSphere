@@ -12,6 +12,7 @@ public class PlayerMoveSphere : MonoBehaviour {
 	public Text winText;
 
 	private Rigidbody rb;
+	private Vector3 SpaceMovement;
 
 	void Start ()
 	{
@@ -27,6 +28,7 @@ public class PlayerMoveSphere : MonoBehaviour {
 		float moveVertical = Input.GetAxis ("Vertical");
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+		SpaceMovement = movement;
 
 		rb.AddForce (movement * speed);
 	}
@@ -45,12 +47,10 @@ public class PlayerMoveSphere : MonoBehaviour {
 		}
 		if (other.gameObject.CompareTag ("Space Object"))  
 		{
-			other.gameObject.SetActive (false);
-			float moveHorizontal = Input.GetAxis ("Horizontal");
-			float moveVertical = Input.GetAxis ("Vertical");
+			Rigidbody SpaceObj;
+			SpaceObj = other.gameObject.GetComponent<Rigidbody> ();
 
-			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-			rb.AddExplosionForce (10, movement, 10); 
+			SpaceObj.AddForce (SpaceMovement);
 		}
 		if (other.gameObject.CompareTag ("Speed Boost"))
 		{
@@ -59,7 +59,7 @@ public class PlayerMoveSphere : MonoBehaviour {
 			float moveVertical = Input.GetAxis ("Vertical");
 
 			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-			rb.AddForce (movement * speed * 20);
+			rb.AddForce (movement * speed * 100);
 		}
     }
 	void SetCountText()
