@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fallout
+  - Hazard
+  - Checkpoint
+  - Collectible
+  - Space Object
+  - Speed Boost
   layers:
   - Default
   - TransparentFX
