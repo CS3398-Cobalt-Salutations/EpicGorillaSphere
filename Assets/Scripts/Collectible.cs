@@ -12,6 +12,7 @@ public class Collectible : MonoBehaviour
         if (pms != null)
         {
             PlayerMoveSphere.count += value;
+            pms.UpdateCountText();
             Destroy(gameObject);
         }
     }

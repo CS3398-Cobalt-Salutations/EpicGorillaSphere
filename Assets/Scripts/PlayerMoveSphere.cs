@@ -20,9 +20,12 @@ public class PlayerMoveSphere : MonoBehaviour
 	{
         controller = (IMovement)GetComponent(typeof(BaseMovement));
 		rb = GetComponent<Rigidbody>();
+        SaveAndLoad.Initialize();
+        SaveAndLoad.SetInitialState(rb);
+        SavePosition();
 		count = 0;
 		keyCount = 0;
-		SetCountText ();
+		UpdateCountText ();
 		winText.text = "";
 	}
 	void FixedUpdate ()
@@ -43,19 +46,7 @@ public class PlayerMoveSphere : MonoBehaviour
             SceneManager.LoadScene("WinScreen", LoadSceneMode.Additive);
         }
     }
-	void OnTriggerEnter (Collider other)
-	{
-		if (other.gameObject.CompareTag ("Space Object"))  
-		{
-			other.gameObject.SetActive (false);
-			float moveHorizontal = Input.GetAxis ("Horizontal");
-			float moveVertical = Input.GetAxis ("Vertical");
-
-			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-			rb.AddExplosionForce (10, movement, 10); 
-		}
-    }
-	void SetCountText()
+	public void UpdateCountText()
 	{
 		countText.text = "Count: " + count.ToString ();
 		if (count >= 5)
@@ -63,4 +54,12 @@ public class PlayerMoveSphere : MonoBehaviour
 			winText.text = "You Win!";
 		}
 	}
+    public void SavePosition()
+    {
+        SaveAndLoad.SaveState(rb);
+    }
+    public void LoadPosition()
+    {
+        SaveAndLoad.LoadState(ref rb);
+    }
 }

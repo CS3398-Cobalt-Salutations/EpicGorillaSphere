@@ -3,13 +3,15 @@ using System.Collections;
 
 public class Door : MonoBehaviour
 {
+    public int keysRequired;
+
     void OnTriggerEnter(Collider collider)
     {
         GameObject other = collider.gameObject;
         PlayerMoveSphere pms = other.GetComponent<PlayerMoveSphere>();
-        if (pms != null && PlayerMoveSphere.keyCount > 0)
+        if (pms != null && PlayerMoveSphere.keyCount >= keysRequired)
         {
-            PlayerMoveSphere.keyCount -= 1;
+            PlayerMoveSphere.keyCount -= keysRequired;
             Destroy(gameObject);
         }
     }
