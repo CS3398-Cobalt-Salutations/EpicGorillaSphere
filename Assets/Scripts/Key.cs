@@ -3,16 +3,19 @@ using System.Collections;
 
 public class Key : MonoBehaviour
 {
-    public int value;
+    public int id;
+    public bool isGlobal;
 
     void OnTriggerEnter(Collider collider)
     {
         GameObject other = collider.gameObject;
-        PlayerMoveSphere pms = other.GetComponent<PlayerMoveSphere>();
-        if (pms != null)
+        Keyring keyring = other.GetComponent<Keyring>();
+        if (keyring != null)
         {
-            PlayerMoveSphere.keyCount += value;
-            Destroy(gameObject);
+            if (keyring.AddKey(this))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

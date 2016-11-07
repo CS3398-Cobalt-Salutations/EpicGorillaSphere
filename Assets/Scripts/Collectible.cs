@@ -4,15 +4,22 @@ using System.Collections;
 public class Collectible : MonoBehaviour
 {
     public int value;
+    public bool isGlobal;
     
     void OnTriggerEnter(Collider collider)
     {
         GameObject other = collider.gameObject;
-        PlayerMoveSphere pms = other.GetComponent<PlayerMoveSphere>();
-        if (pms != null)
+        ScoreKeeper score = other.GetComponent<ScoreKeeper>();
+        if (score != null)
         {
-            PlayerMoveSphere.count += value;
-            pms.UpdateCountText();
+            if (isGlobal)
+            {
+                ScoreKeeper.UpdateGlobalScore(value);
+            }
+            else
+            {
+                score.UpdatePersonalScore(value);
+            }
             Destroy(gameObject);
         }
     }

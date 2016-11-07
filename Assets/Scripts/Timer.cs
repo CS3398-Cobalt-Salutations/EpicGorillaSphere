@@ -15,9 +15,9 @@ public class Timer : MonoBehaviour {
 	}
 
 	void Update () {
-		if(PlayerMoveSphere.count >= 5){
-			Debug.Log("Timer stopped at " + TimeToString(StopTimer()));
-		}
+        //if(PlayerMoveSphere.count >= 5){
+        //    Debug.Log("Timer stopped at " + TimeToString(StopTimer()));
+        //}
 
 		if(keepTiming){
 			UpdateTime();
