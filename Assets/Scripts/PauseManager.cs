@@ -13,7 +13,7 @@ public class PauseManager : MonoBehaviour {
     // Use this for initialization
     void Start() {
         panel.gameObject.SetActive(false);
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
     }
 
     
