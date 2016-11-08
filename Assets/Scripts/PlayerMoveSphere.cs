@@ -14,7 +14,6 @@ public class PlayerMoveSphere : MonoBehaviour
 
     private IMovement controller;
 	private Rigidbody rb;
-	private Vector3 SpaceMovement;
 
 	void Start ()
 	{

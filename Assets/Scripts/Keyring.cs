@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Keyring : MonoBehaviour
 {
     public int maxCapacity;
+    public Text keyText;
 
     private List<Key> personalKeys;
     private static List<Key> globalKeys = new List<Key>();
@@ -12,6 +14,7 @@ public class Keyring : MonoBehaviour
     void Start()
     {
         personalKeys = new List<Key>();
+        UpdateKeyDisplay();
     }
 
     public bool AddKey(Key key)
@@ -21,10 +24,16 @@ public class Keyring : MonoBehaviour
         if (key.isGlobal)
         {
             globalKeys.Add(key);
+            Keyring[] keyHolders = Object.FindObjectsOfType<Keyring>();
+            foreach (Keyring holder in keyHolders)
+            {
+                holder.UpdateKeyDisplay();
+            }
         }
         else
         {
             personalKeys.Add(key);
+            UpdateKeyDisplay();
         }
         return true;
     }
@@ -37,16 +46,27 @@ public class Keyring : MonoBehaviour
     public static void RemoveGlobalKey(int index)
     {
         globalKeys.RemoveAt(index);
+        Keyring[] keyHolders = Object.FindObjectsOfType<Keyring>();
+        foreach (Keyring holder in keyHolders)
+        {
+            holder.UpdateKeyDisplay();
+        }
     }
 
     public void RemovePersonalKey(int index)
     {
         personalKeys.RemoveAt(index);
+        UpdateKeyDisplay();
     }
 
     public Key GetPersonalKey(int index)
     {
         return personalKeys[index];
+    }
+
+    private void UpdateKeyDisplay()
+    {
+        keyText.text = "Keys: " + CombinedKeyCount.ToString();
     }
 
     public int PersonalKeyCount { get { return personalKeys.Count; } }
