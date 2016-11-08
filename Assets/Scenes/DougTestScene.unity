@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692618, g: 0.49678808, b: 0.57508606, a: 1}
+  m_IndirectSpecularColor: {r: 0.4469267, g: 0.49678862, b: 0.57508683, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -487,6 +487,7 @@ GameObject:
   - 33: {fileID: 482898960}
   - 136: {fileID: 482898959}
   - 23: {fileID: 482898958}
+  - 114: {fileID: 482898962}
   m_Layer: 0
   m_Name: Hazard
   m_TagString: Hazard
@@ -530,7 +531,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 482898957}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -556,6 +557,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &482898962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 482898957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57a4b44ba40c474aabc5a2f4dc76fe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &540062389 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012789006686, guid: cedadfa421db64f078780d4db4485887,
@@ -777,6 +789,7 @@ GameObject:
   - 135: {fileID: 971135914}
   - 23: {fileID: 971135913}
   - 114: {fileID: 971135911}
+  - 114: {fileID: 971135917}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -792,10 +805,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 971135910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6d298ee82efc9348b4007374b71d09e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b6e4d49f169a49e7b1312cd20f7689a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
+  playerNumber: 0
 --- !u!54 &971135912
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -872,6 +886,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &971135917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971135910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627849737bbeb2e44a41e023ca0e0f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1024653069
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,44 @@
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     1136 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.241 seconds
+Platform assembly: C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Dillon\CS3398-Github\EpicGorillaSphere\Level01Demo_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.942475 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: f44 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 234.952530 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 417.
+Total: 12.276719 ms (FindLiveObjects: 0.024989 ms CreateObjectMapping: 0.021866 ms MarkObjects: 12.215137 ms  DeleteObjects: 0.013833 ms)
+
+The referenced script on this Behaviour (Game Object 'Skybox') is missing!
+ 
+(Filename:  Line: 1656)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.669817 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1057.
+Total: 0.435537 ms (FindLiveObjects: 0.069614 ms CreateObjectMapping: 0.030344 ms MarkObjects: 0.318174 ms  DeleteObjects: 0.016511 ms)
+
