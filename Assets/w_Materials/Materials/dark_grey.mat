@@ -7,9 +7,15 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: dark_grey
+<<<<<<< HEAD
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+=======
   m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
+>>>>>>> develop
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -69,12 +75,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD
+=======
     - first:
         name: _SpecGlossMap
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+>>>>>>> develop
     m_Floats:
     - first:
         name: _BumpScale
@@ -92,6 +101,10 @@ Material:
         name: _EmissionScaleUI
       second: 0
     - first:
+<<<<<<< HEAD
+        name: _Glossiness
+      second: 0.25
+=======
         name: _GlossMapScale
       second: 1
     - first:
@@ -100,6 +113,7 @@ Material:
     - first:
         name: _GlossyReflections
       second: 1
+>>>>>>> develop
     - first:
         name: _Metallic
       second: 0
@@ -113,12 +127,15 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
+<<<<<<< HEAD
+=======
         name: _SmoothnessTextureChannel
       second: 0
     - first:
         name: _SpecularHighlights
       second: 1
     - first:
+>>>>>>> develop
         name: _SrcBlend
       second: 1
     - first:
@@ -137,6 +154,9 @@ Material:
     - first:
         name: _EmissionColorUI
       second: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD
+=======
     - first:
         name: _SpecColor
       second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+>>>>>>> develop
