@@ -10,6 +10,7 @@ using System;
 public class PlayerMoveSphere : MonoBehaviour
 {
 	public float speed;
+    public int playerNumber;
 
     private IMovement controller;
 	private Rigidbody rb;
@@ -19,7 +20,7 @@ public class PlayerMoveSphere : MonoBehaviour
         controller = (IMovement)GetComponent(typeof(BaseMovement));
 		rb = GetComponent<Rigidbody>();
         SaveAndLoad.Initialize();
-        SaveAndLoad.SetInitialState(rb);
+        SaveAndLoad.SetInitialState(this);
         SavePosition();
 	}
 
@@ -29,21 +30,13 @@ public class PlayerMoveSphere : MonoBehaviour
 		rb.AddForce (movement * speed);
 	}
 
-    //void Update()
-    //{
-    //    if (count >= 5)
-    //    {
-    //        SceneManager.LoadScene("WinScreen", LoadSceneMode.Additive);
-    //    }
-    //}
-
     public void SavePosition()
     {
-        SaveAndLoad.SaveState(rb);
+        SaveAndLoad.SaveState(this);
     }
 
     public void LoadPosition()
     {
-        SaveAndLoad.LoadState(ref rb);
+        SaveAndLoad.LoadState(this);
     }
 }
