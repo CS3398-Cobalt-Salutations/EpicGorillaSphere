@@ -5899,6 +5899,11 @@ Prefab:
       propertyPath: playerNumber
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000013423161990, guid: 3fcb396e127d249d7b7d59caf319b1f8,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 28cb9faebbb65421d811eac64aed4d07, type: 2}
     m_RemovedComponents:
     - {fileID: 114000010216369994, guid: 3fcb396e127d249d7b7d59caf319b1f8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3fcb396e127d249d7b7d59caf319b1f8, type: 2}
