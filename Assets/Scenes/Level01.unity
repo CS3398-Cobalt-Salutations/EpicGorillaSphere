@@ -4999,6 +4999,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013788321928, guid: b0e6f193b25b14e208d1e5e1c650508c,
+        type: 2}
+      propertyPath: destroyOnPickup
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0e6f193b25b14e208d1e5e1c650508c, type: 2}
   m_IsPrefabParent: 0
@@ -5246,6 +5251,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   playerNumber: 0
+--- !u!114 &1101317906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1101317901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f1d7e4b1932784f85167f9c6d5c0fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1137658115
 Prefab:
   m_ObjectHideFlags: 0
@@ -6054,7 +6070,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09f3774df36544822b719e50f07e76ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1101317901}
+  player: {fileID: 1101317903}
+  rotationSpeed: 2
 --- !u!81 &1274955900
 AudioListener:
   m_ObjectHideFlags: 0
@@ -6116,10 +6133,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1274955898}
-  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.150001, y: 106.87, z: -6.009995}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -7524,6 +7541,7 @@ Prefab:
       objectReference: {fileID: 30555654}
     m_RemovedComponents:
     - {fileID: 114000012872325390, guid: 3fcb396e127d249d7b7d59caf319b1f8, type: 2}
+    - {fileID: 114000010216369994, guid: 3fcb396e127d249d7b7d59caf319b1f8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3fcb396e127d249d7b7d59caf319b1f8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1663668670
