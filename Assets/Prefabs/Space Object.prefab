@@ -24,6 +24,7 @@ GameObject:
   - 23: {fileID: 23000012804609010}
   - 114: {fileID: 114000013790890802}
   - 54: {fileID: 54000011085433156}
+  - 114: {fileID: 114000012905220558}
   m_Layer: 0
   m_Name: Space Object
   m_TagString: Space Object
@@ -95,6 +96,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &114000012905220558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011230713176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcd2a0713bbac0947b5685081aac090e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!114 &114000013790890802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,6 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bb1fe3bebc48788dcb71fbef360de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotateX: 0
+  rotateY: 0
+  rotateZ: 0
 --- !u!136 &136000013503190166
 CapsuleCollider:
   m_ObjectHideFlags: 1
