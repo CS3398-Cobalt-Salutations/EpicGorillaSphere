@@ -8,8 +8,8 @@ TagManager:
   - Hazard
   - Checkpoint
   - Collectible
-  - Space Object
-  - Speed Boost
+  - Fire
+  - Teleporter
   layers:
   - Default
   - TransparentFX
