@@ -14,6 +14,7 @@ public class PlayerMoveSphere : MonoBehaviour
 
     private IMovement controller;
 	private Rigidbody rb;
+	private Vector3 SpaceMovement;
 
 	void Start ()
 	{
@@ -29,7 +30,7 @@ public class PlayerMoveSphere : MonoBehaviour
         Vector3 movement = controller.CalculateMovement();
 		rb.AddForce (movement * speed);
 	}
-
+    
     public void SavePosition()
     {
         SaveAndLoad.SaveState(this);
