@@ -7,22 +7,46 @@ public class Timer : MonoBehaviour {
 	public Text timerText;
 	private float startTime;
 
-	// Use this for initialization
+	bool keepTiming;
+	float timer;
+
 	void Start () {
-
-		startTime = Time.time;
-	
+		StartTimer();
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
+		if(PlayerMoveSphere.count >= 5){
+			Debug.Log("Timer stopped at " + TimeToString(StopTimer()));
+		}
 
-		float t = Time.time - startTime;
+		if(keepTiming){
+			UpdateTime();
+		}
+	}
 
-		string minutes = ((int)t / 60).ToString ();
-		string seconds = (t % 60).ToString ("f2");
+	void UpdateTime(){
+		timer = Time.time - startTime;
+		timerText.text = TimeToString(timer);
+	}
 
-		timerText.text = minutes + ":" + seconds;
+	float StopTimer(){
+		keepTiming = false;
+		return timer;
+	}
 
+	void ResumeTimer(){
+		keepTiming = true;
+		startTime = Time.time-timer;
+	}
+
+	void StartTimer(){
+		keepTiming = true;
+		startTime = Time.time;
+	}
+
+	string TimeToString(float t){
+		string minutes = ((int) t / 60).ToString();
+		string seconds = (t % 60 ).ToString("f2");
+		return minutes + ":" + seconds;
 	}
 }
