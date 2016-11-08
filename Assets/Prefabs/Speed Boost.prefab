@@ -24,6 +24,7 @@ GameObject:
   - 23: {fileID: 23000013454751664}
   - 114: {fileID: 114000013455732466}
   - 54: {fileID: 54000012678910034}
+  - 114: {fileID: 114000013788321928}
   m_Layer: 0
   m_Name: Speed Boost
   m_TagString: Speed Boost
@@ -106,6 +107,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bb1fe3bebc48788dcb71fbef360de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotateX: 0
+  rotateY: 0
+  rotateZ: 0
+--- !u!114 &114000013788321928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013546244478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5027c9337aa07da43b47101d70d01042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnitude: 100
 --- !u!136 &136000011118032402
 CapsuleCollider:
   m_ObjectHideFlags: 1

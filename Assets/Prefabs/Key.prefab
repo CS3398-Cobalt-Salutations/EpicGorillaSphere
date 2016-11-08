@@ -25,8 +25,6 @@ GameObject:
   - 114: {fileID: 114000012539173708}
   - 54: {fileID: 54000011161295894}
   - 114: {fileID: 114000012177278792}
-  - 114: {fileID: 114000011381470028}
-  - 114: {fileID: 114000010905809542}
   m_Layer: 0
   m_Name: Key
   m_TagString: Collectible
@@ -41,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013435551208}
   m_LocalRotation: {x: 0.46193978, y: 0.19134173, z: 0.19134173, w: 0.84462327}
-  m_LocalPosition: {x: 11.2, y: 0.75, z: 11.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 45, y: 45, z: 45}
   m_Children: []
@@ -98,58 +96,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000010905809542
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013435551208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TransformSyncMode: 3
-  m_SendInterval: 0
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
---- !u!114 &114000011381470028
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013435551208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 6
-    i1: 20
-    i2: 54
-    i3: 176
-    i4: 215
-    i5: 24
-    i6: 96
-    i7: 132
-    i8: 74
-    i9: 80
-    i10: 43
-    i11: 96
-    i12: 112
-    i13: 200
-    i14: 109
-    i15: 166
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
 --- !u!114 &114000012177278792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -161,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8e7a33257ff4b49ac62fffc550bbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupAmount: 1
-  isGlobal: 0
+  id: 0
+  isGlobal: 1
 --- !u!114 &114000012539173708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,6 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42bb1fe3bebc48788dcb71fbef360de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotateX: 15
+  rotateY: 30
+  rotateZ: 45
 --- !u!136 &136000011414929698
 CapsuleCollider:
   m_ObjectHideFlags: 1

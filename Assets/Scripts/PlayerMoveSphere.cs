@@ -2,72 +2,42 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System;
 
-public class PlayerMoveSphere : MonoBehaviour {
-
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(ScoreKeeper))]
+[RequireComponent(typeof(Keyring))]
+public class PlayerMoveSphere : MonoBehaviour
+{
 	public float speed;
-	public static int keyCount;
-	public static int count;
-	public Text countText;
-	public Text winText;
+    public int playerNumber;
 
+    private IMovement controller;
 	private Rigidbody rb;
 	private Vector3 SpaceMovement;
 
 	void Start ()
 	{
-		rb = GetComponent<Rigidbody> ();
-		count = 0;
-		keyCount = 0;
-		SetCountText ();
-		winText.text = "";
+        controller = (IMovement)GetComponent(typeof(BaseMovement));
+		rb = GetComponent<Rigidbody>();
+        SaveAndLoad.Initialize();
+        SaveAndLoad.SetInitialState(this);
+        SavePosition();
 	}
+
 	void FixedUpdate ()
 	{
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-
-		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-		SpaceMovement = movement;
-
+        Vector3 movement = controller.CalculateMovement();
 		rb.AddForce (movement * speed);
 	}
-	void OnTriggerEnter (Collider other)
-	{
-		if (other.gameObject.CompareTag ("Collectible")) 
-		{
-			other.gameObject.SetActive (false);
-			count = count + 1;
-			SetCountText ();
-			if (count >= 5) 
-			{
-				SceneManager.LoadScene ("WinScreen", LoadSceneMode.Additive);
-			}
-
-		}
-		if (other.gameObject.CompareTag ("Space Object"))  
-		{
-			Rigidbody SpaceObj;
-			SpaceObj = other.gameObject.GetComponent<Rigidbody> ();
-
-			SpaceObj.AddForce (SpaceMovement);
-		}
-		if (other.gameObject.CompareTag ("Speed Boost"))
-		{
-			other.gameObject.SetActive (false);
-			float moveHorizontal = Input.GetAxis ("Horizontal");
-			float moveVertical = Input.GetAxis ("Vertical");
-
-			Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-			rb.AddForce (movement * speed * 100);
-		}
+    
+    public void SavePosition()
+    {
+        SaveAndLoad.SaveState(this);
     }
-	void SetCountText()
-	{
-		countText.text = "Count: " + count.ToString ();
-		if (count >= 5)
-		{
-			winText.text = "You Win!";
-		}
-	}
+
+    public void LoadPosition()
+    {
+        SaveAndLoad.LoadState(this);
+    }
 }
