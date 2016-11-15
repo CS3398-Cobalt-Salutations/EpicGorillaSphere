@@ -3,8 +3,8 @@ using System.Collections;
 
 public class BaseMovement : MonoBehaviour, IMovement
 {
-    protected Vector3 relativeRight;
-    protected Vector3 relativeForward;
+    protected Vector3 relativeRight = Vector3.right;
+    protected Vector3 relativeForward = Vector3.forward;
 
     virtual public Vector3 CalculateMovement()
     {

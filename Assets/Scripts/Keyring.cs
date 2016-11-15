@@ -66,6 +66,7 @@ public class Keyring : MonoBehaviour
 
     private void UpdateKeyDisplay()
     {
+        if (keyText == null) return;
         keyText.text = "Keys: " + CombinedKeyCount.ToString();
     }
 

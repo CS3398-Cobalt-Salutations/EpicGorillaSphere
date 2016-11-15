@@ -43,6 +43,7 @@ public class ScoreKeeper : MonoBehaviour
 
     private void UpdateScoreDisplay()
     {
+        if (scoreText == null) return;
         scoreText.text = "Score: " + CombinedScore.ToString();
     }
 
