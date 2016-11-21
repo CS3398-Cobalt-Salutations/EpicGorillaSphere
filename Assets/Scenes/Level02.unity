@@ -4719,8 +4719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885b1972ad11a921d000d37b8d76c639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  CloudsSpeed: 0
+  Player: {fileID: 1101317911}
+  CloudsSpeed: 3
 --- !u!23 &960253910
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5183,6 +5183,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f1d7e4b1932784f85167f9c6d5c0fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1101317911 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000012792958648, guid: 3fcb396e127d249d7b7d59caf319b1f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636192277}
 --- !u!1001 &1137658115
 Prefab:
   m_ObjectHideFlags: 0
@@ -5932,6 +5937,7 @@ GameObject:
   - 222: {fileID: 1260634470}
   - 114: {fileID: 1260634469}
   - 114: {fileID: 1260634468}
+  - 114: {fileID: 1260634471}
   m_Layer: 5
   m_Name: Quit Game
   m_TagString: Untagged
@@ -5996,7 +6002,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1260634469}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1260634471}
+        m_MethodName: quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1260634469
@@ -6032,6 +6049,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1260634466}
+--- !u!114 &1260634471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1260634466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f8c4bdd5f37a54ea1160df039bf3e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1273672358 stripped
 Transform:
   m_PrefabParentObject: {fileID: 494318, guid: 69b1a91c6b7bd754bace5a384c4479dc, type: 2}
