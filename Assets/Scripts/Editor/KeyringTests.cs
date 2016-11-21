@@ -33,9 +33,17 @@ namespace GorirraTest
 
             bool keyAdded = testKeyring.AddKey(testKey);
 
-            Assert.That(keyAdded == false);
-            Assert.That(testKeyring.PersonalKeyCount == 0);
-            Assert.That(Keyring.GlobalKeyCount == 0);
+            try
+            {
+                Assert.That(keyAdded == true);
+                Assert.That(testKeyring.PersonalKeyCount == 0);
+                Assert.That(Keyring.GlobalKeyCount == 0);
+            }
+            catch (AssertionException e)
+            {
+                Debug.LogException(e);
+                throw;
+            }
         }
 
         [Test]
@@ -59,8 +67,16 @@ namespace GorirraTest
             bool keyAdded = testKeyring.AddKey(testKey);
 
             // Run assertion
-            Assert.That(keyAdded == true);
-            Assert.That(testKeyring.PersonalKeyCount == 1);
+            try
+            {
+                Assert.That(keyAdded == true);
+                Assert.That(testKeyring.PersonalKeyCount == 1);
+            }
+            catch (AssertionException e)
+            {
+                Debug.LogException(e);
+                throw;
+            }
         }
 
         [Test]
@@ -84,8 +100,16 @@ namespace GorirraTest
             bool keyAdded = testKeyring.AddKey(testKey);
 
             // Run assertion
-            Assert.That(keyAdded == true);
-            Assert.That(Keyring.GlobalKeyCount == 0);
+            try
+            {
+                Assert.That(keyAdded == true);
+                Assert.That(Keyring.GlobalKeyCount == 0);
+            }
+            catch (AssertionException e)
+            {
+                Debug.LogException(e);
+                throw;
+            }
         }
 
         //[Test]
