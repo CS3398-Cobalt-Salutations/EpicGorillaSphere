@@ -2,24 +2,27 @@
 using UnityEditor;
 using NUnit.Framework;
 
+// If Cloud Build fails, don't need to specify a method
+// Implications:
+// -> Can remove UnitTest.cs
+// -> Can remove RunTests()
+// -> Adding new unit tests is much easier
+// -> Can set up test cases without providing default arguments from RunTests()
+
+// Otherwise (if Cloud Build succeeds), UnitTest.cs is necessary, and the above truth values are negated
+
 namespace GorirraTest
 {
     [TestFixture]
     [Category("Keyring Tests")]
     internal class KeyringTests
     {
-        public static void RunTests()
-        {
-            KeyringTests tests = new KeyringTests();
-            tests.Keyring_OverCapacity_AfterPersonalKeyAdded();
-            tests.Keyring_NoPersonalKeys_AfterPersonalKeyAdded();
-            tests.Keyring_GlobalKeysChanged_AfterPersonalKeyAdded();
-        }
-
         [Test]
         [Category("General Tests")]
         public void Keyring_OverCapacity_AfterPersonalKeyAdded()
         {
+            // string testName = System.Reflection.MethodBase.GetCurrentMethod().Name;
+
             GameObject testObject = new GameObject();
             testObject.AddComponent<Keyring>();
             Keyring testKeyring = testObject.GetComponent<Keyring>();
@@ -33,11 +36,15 @@ namespace GorirraTest
 
             bool keyAdded = testKeyring.AddKey(testKey);
 
+            //UnitTest.MakeAssertion(keyAdded == true, "keyAdded == true", keyAdded.ToString(), testName);
+            //UnitTest.MakeAssertion(testKeyring.PersonalKeyCount == 0, "testKeyring.PersonalKeyCount == 0", testKeyring.PersonalKeyCount.ToString(), testName);
+            //UnitTest.MakeAssertion(Keyring.GlobalKeyCount == 0, "Keyring.GlobalKeyCount == 0", Keyring.GlobalKeyCount.ToString(), testName);
+
             try
             {
-                Assert.That(keyAdded == true);
-                Assert.That(testKeyring.PersonalKeyCount == 0);
-                Assert.That(Keyring.GlobalKeyCount == 0);
+                Assert.True(keyAdded);
+                Assert.AreEqual(testKeyring.PersonalKeyCount, 0);
+                Assert.AreEqual(Keyring.GlobalKeyCount, 0);
             }
             catch (AssertionException e)
             {
@@ -50,6 +57,8 @@ namespace GorirraTest
         [Category("Personal Keys Tests")]
         public void Keyring_NoPersonalKeys_AfterPersonalKeyAdded()
         {
+            // string testName = System.Reflection.MethodBase.GetCurrentMethod().Name;
+            
             // Setup keyring
             GameObject testObject = new GameObject("Test Object");
             testObject.AddComponent<Keyring>();
@@ -66,11 +75,13 @@ namespace GorirraTest
             // Perform test
             bool keyAdded = testKeyring.AddKey(testKey);
 
-            // Run assertion
+            // Run assertions
+            //UnitTest.MakeAssertion(keyAdded == true, "keyAdded == true", keyAdded.ToString(), testName);
+            //UnitTest.MakeAssertion(testKeyring.PersonalKeyCount == 1, "testKeyring.PersonalKeyCount == 1", testKeyring.PersonalKeyCount.ToString(), testName);
             try
             {
-                Assert.That(keyAdded == true);
-                Assert.That(testKeyring.PersonalKeyCount == 1);
+                Assert.True(keyAdded);
+                Assert.AreEqual(testKeyring.PersonalKeyCount, 1);
             }
             catch (AssertionException e)
             {
@@ -83,6 +94,8 @@ namespace GorirraTest
         [Category("Global Keys Tests")]
         public void Keyring_GlobalKeysChanged_AfterPersonalKeyAdded()
         {
+            // string testName = System.Reflection.MethodBase.GetCurrentMethod().Name;
+            
             // Setup keyring
             GameObject testObject = new GameObject("Test Object");
             testObject.AddComponent<Keyring>();
@@ -100,10 +113,12 @@ namespace GorirraTest
             bool keyAdded = testKeyring.AddKey(testKey);
 
             // Run assertion
+            //UnitTest.MakeAssertion(keyAdded == true, "keyAdded == true", keyAdded.ToString(), testName);
+            //UnitTest.MakeAssertion(Keyring.GlobalKeyCount == 0, "Keyring.GlobalKeyCount == 0", Keyring.GlobalKeyCount.ToString(), testName);
             try
             {
-                Assert.That(keyAdded == true);
-                Assert.That(Keyring.GlobalKeyCount == 0);
+                Assert.True(keyAdded);
+                Assert.AreEqual(Keyring.GlobalKeyCount, 1); // 0, but set to 1 knowing it will fail
             }
             catch (AssertionException e)
             {
