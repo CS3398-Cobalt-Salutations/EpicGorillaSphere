@@ -9,6 +9,11 @@ public class Hazard : MonoBehaviour
         PlayerMoveSphere pms = other.GetComponent<PlayerMoveSphere>();
         if (pms != null)
         {
+			ScoreKeeper.lives--;
+			if (ScoreKeeper.lives <= 0) 
+			{
+				Application.LoadLevel ("Start Menu");
+			}
             pms.LoadPosition();
         }
     }
