@@ -42,7 +42,7 @@ namespace GorirraTest
 
             try
             {
-                Assert.True(keyAdded);
+                Assert.False(keyAdded);
                 Assert.AreEqual(testKeyring.PersonalKeyCount, 0);
                 Assert.AreEqual(Keyring.GlobalKeyCount, 0);
             }
@@ -118,7 +118,7 @@ namespace GorirraTest
             try
             {
                 Assert.True(keyAdded);
-                Assert.AreEqual(Keyring.GlobalKeyCount, 1); // 0, but set to 1 knowing it will fail
+                Assert.AreEqual(Keyring.GlobalKeyCount, 0);
             }
             catch (AssertionException e)
             {
