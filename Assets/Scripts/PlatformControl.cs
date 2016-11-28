@@ -5,12 +5,11 @@ public class PlatformControl : MonoBehaviour {
 
 
     public float speed;
-    private Rigidbody rb;
 
     // Use this for initialization
     void Start()
     {
-        rb = GetComponent<Rigidbody>(); // this assigns rb to be a rigid body component. 
+
     }
 
     // Update is called once per frame

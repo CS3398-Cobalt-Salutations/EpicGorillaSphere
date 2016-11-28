@@ -8,7 +8,7 @@ public class Keyring : MonoBehaviour
     public int maxCapacity;
     public Text keyText;
 
-    private List<Key> personalKeys;
+    private List<Key> personalKeys = new List<Key>();
     private static List<Key> globalKeys = new List<Key>();
 
     void Start()
@@ -66,6 +66,7 @@ public class Keyring : MonoBehaviour
 
     private void UpdateKeyDisplay()
     {
+        if (keyText == null) return;
         keyText.text = "Keys: " + CombinedKeyCount.ToString();
     }
 

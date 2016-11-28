@@ -7,7 +7,7 @@ public class MPostControl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-     Vector3 starPos = transform.position;
+
     }
 
     // Update is called once per frame

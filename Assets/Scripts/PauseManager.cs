@@ -4,7 +4,7 @@ using System.Collections;
 public class PauseManager : MonoBehaviour {
 
  
-    public GameObject panel;
+    public GameObject panel; //panel is the Pause Menu
     //GameObject player;
     public MonoBehaviour[] Scripts;
 
