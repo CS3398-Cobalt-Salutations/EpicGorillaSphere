@@ -23,7 +23,13 @@ public class Timer : MonoBehaviour {
 			UpdateTime();
 		}
 	}
-
+	void OnTriggerEnter (Collider other)
+	{
+		if(other.gameObject.tag == "Goal")
+		{
+			keepTiming = false;
+		}
+	}
 	void UpdateTime(){
 		timer = Time.time - startTime;
 		timerText.text = TimeToString(timer);
