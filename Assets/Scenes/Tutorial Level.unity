@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692498, g: 0.496787, b: 0.57508546, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -521,6 +521,28 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8ecb1249d5dafb4cab3b5c32e613ab9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &72919053 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010702920432, guid: 2f322ecb6431e5146ba47b6a75c9a79a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1968630982}
+--- !u!95 &72919059
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72919053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f122367a0b2e4a45b649ec7a4ff0326, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &107585872
 GameObject:
   m_ObjectHideFlags: 0
@@ -5452,6 +5474,28 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0e6f193b25b14e208d1e5e1c650508c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1197538678 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010702920432, guid: 2f322ecb6431e5146ba47b6a75c9a79a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1449496414}
+--- !u!95 &1197538684
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1197538678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6c88c6636c2c345e4b598a699269f5b1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1198250410
 Prefab:
   m_ObjectHideFlags: 0
@@ -9449,6 +9493,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 14956660}
   m_RootOrder: 4
+--- !u!1 &1940469611 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010702920432, guid: 2f322ecb6431e5146ba47b6a75c9a79a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1854793342}
+--- !u!95 &1940469612
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1940469611}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d3e9262a756c54bf3be6da9dfa4d8a19, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1960713080
 Prefab:
   m_ObjectHideFlags: 0
