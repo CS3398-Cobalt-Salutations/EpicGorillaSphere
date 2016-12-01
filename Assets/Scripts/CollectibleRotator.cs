@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CollectibleRotator : MonoBehaviour {
+public class CollectibleRotator : MonoBehaviour
+{
+    public float rotateX;
+    public float rotateY;
+    public float rotateZ;
 
 	void Update () 
 	{
-		transform.Rotate (new Vector3 (15, 30, 45) * Time.deltaTime);
+		transform.Rotate (new Vector3 (rotateX, rotateY, rotateZ) * Time.deltaTime);
 	}
 }
