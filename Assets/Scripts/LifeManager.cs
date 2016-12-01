@@ -21,7 +21,7 @@ public class LifeManager : MonoBehaviour
     {
         textStyle = new GUIStyle();
         textStyle.fontSize = 28;
-        Lives = 1;
+        Lives = 5;
     }
 
     private void CheckForDeath()
