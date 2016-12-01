@@ -15,6 +15,7 @@ public class SpeedBoost : MonoBehaviour
             Rigidbody rb = other.GetComponent<Rigidbody>();
             IMovement controller = (IMovement)other.GetComponent(typeof(BaseMovement));
             rb.AddForce(controller.CalculateMovement() * pms.speed * magnitude);
+			//pms.speed = 20;
             if (destroyOnPickup)
             {
                 Destroy(gameObject);
