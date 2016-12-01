@@ -5,6 +5,9 @@ public class Collectible : MonoBehaviour
 {
     public int value;
     public bool isGlobal;
+
+    private static int collectedCounter = 0;
+    private const int threshold = 5;
     
     void OnTriggerEnter(Collider collider)
     {
@@ -20,6 +23,14 @@ public class Collectible : MonoBehaviour
             {
                 score.UpdatePersonalScore(value);
             }
+            
+            if (++collectedCounter >= threshold)
+            {
+                collectedCounter = 0;
+                SoundManager sm = other.GetComponent<SoundManager>();
+                sm.PlayOnPickup();
+            }
+
             Destroy(gameObject);
         }
     }
