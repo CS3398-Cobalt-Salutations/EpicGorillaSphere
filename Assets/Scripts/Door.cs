@@ -4,6 +4,16 @@ using System.Collections;
 public class Door : MonoBehaviour
 {
     public int[] matchIds;
+	public GameObject door;
+	public Animator doorOpen;
+	public Animator doorClose;
+
+	//Use for initialization
+	void Start () {
+		door = gameObject;
+		doorOpen = door.GetComponent<Animator>();
+		doorClose = door.GetComponent<Animator>();
+	}
 
     void OnTriggerEnter(Collider collider)
     {
@@ -13,7 +23,7 @@ public class Door : MonoBehaviour
         {
             if (Unlock(ref keyring))
             {
-                Destroy(gameObject);
+				doorOpen.SetTrigger("Open");
             }
         }
     }

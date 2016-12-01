@@ -29,7 +29,6 @@ public class ScoreKeeper : MonoBehaviour
             holder.UpdateScoreDisplay();
         }
     }
-
     public int GetPersonalScore()
     {
         return personalScore;

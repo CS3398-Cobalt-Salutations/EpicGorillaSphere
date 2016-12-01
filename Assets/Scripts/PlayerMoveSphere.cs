@@ -7,6 +7,7 @@ using System;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(ScoreKeeper))]
 [RequireComponent(typeof(Keyring))]
+[RequireComponent(typeof(LifeManager))]
 public class PlayerMoveSphere : MonoBehaviour
 {
 	public float speed;
