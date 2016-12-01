@@ -16,11 +16,16 @@ public class RestartLevel : MonoBehaviour {
     //Restarts Level to beginning
     public void Restart()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        StartCoroutine(FadeToRestart());
+
         
     }
-
+    IEnumerator FadeToRestart()
+    {
+        Time.timeScale = 1;
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     public void restartAtLastCheckpoint()
     {
         //Maaaaaaybe?
