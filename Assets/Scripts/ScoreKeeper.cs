@@ -31,6 +31,12 @@ public class ScoreKeeper : MonoBehaviour
             holder.UpdateScoreDisplay();
         }
     }
+
+    public static void ClearGlobalScore()
+    {
+        globalScore = 0;
+    }
+
     public int GetPersonalScore()
     {
         return personalScore;

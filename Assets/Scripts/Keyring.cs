@@ -53,6 +53,11 @@ public class Keyring : MonoBehaviour
         }
     }
 
+    public static void ClearGlobalKeys()
+    {
+        globalKeys.Clear();
+    }
+
     public void RemovePersonalKey(int index)
     {
         personalKeys.RemoveAt(index);
