@@ -5,14 +5,12 @@ using UnityEngine.UI;
 public class ScoreKeeper : MonoBehaviour
 {
     public Text scoreText;
-	public static int lives;
 
     private int personalScore;
     private static int globalScore;
     
     void Start()
     {
-		lives = 5;
         personalScore = 0;
         UpdateScoreDisplay();
     }

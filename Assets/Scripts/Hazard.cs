@@ -10,11 +10,8 @@ public class Hazard : MonoBehaviour
 
         if (pms != null)
         {
-			ScoreKeeper.lives--;
-			if (ScoreKeeper.lives <= 0) 
-			{
-				Application.LoadLevel ("Start Menu");
-			}
+            LifeManager lm = other.GetComponent<LifeManager>();
+            --lm.Lives;
             pms.LoadPosition();
         }
     }
