@@ -10,6 +10,11 @@ TagManager:
   - Collectible
   - Fire
   - Teleporter
+  - Space Object
+  - Speed Boost
+  - Door
+  - Key
+  - Goal
   layers:
   - Default
   - TransparentFX
