@@ -37,9 +37,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010949605388}
-  - 82: {fileID: 82000014123714740}
-  - 114: {fileID: 114000010841443162}
   - 65: {fileID: 65000012667030542}
+  - 114: {fileID: 114000012951377404}
   m_Layer: 0
   m_Name: Victory
   m_TagString: Untagged
@@ -374,81 +373,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15, y: 12, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &82000014123714740
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012144023052}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aef0c81dc90164edabc2e3c16f061082, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.7
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
---- !u!114 &114000010841443162
+--- !u!114 &114000012951377404
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -456,7 +381,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000012144023052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e118608ef0c564824b9dea13f01a24ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b27507a8d569ab4591fd5a5d6355c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victory: {fileID: 8300000, guid: aef0c81dc90164edabc2e3c16f061082, type: 3}
+  soundType: 1
+  clipIndex: -1

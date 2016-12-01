@@ -28,6 +28,8 @@ public class LifeManager : MonoBehaviour
     {
         if (Lives <= 0)
         {
+            Keyring.ClearGlobalKeys();
+            ScoreKeeper.ClearGlobalScore();
             Application.LoadLevel("OpeningScreen");
         }
     }

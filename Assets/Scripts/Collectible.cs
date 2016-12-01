@@ -27,8 +27,7 @@ public class Collectible : MonoBehaviour
             if (++collectedCounter >= threshold)
             {
                 collectedCounter = 0;
-                SoundManager sm = other.GetComponent<SoundManager>();
-                sm.PlayOnPickup();
+                FindObjectOfType<SoundManager>().PlayOnPickup();
             }
 
             Destroy(gameObject);

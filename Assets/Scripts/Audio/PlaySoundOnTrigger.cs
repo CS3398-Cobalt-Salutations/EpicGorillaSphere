@@ -4,14 +4,15 @@ using System.Collections;
 public class PlaySoundOnTrigger : MonoBehaviour
 {
     public SoundType soundType;
+    public int clipIndex = -1;
 
     void OnTriggerEnter(Collider collider)
     {
         GameObject other = collider.gameObject;
-        SoundManager sm = other.GetComponent<SoundManager>();
-        if (sm != null)
+        PlayerMoveSphere pms = other.GetComponent<PlayerMoveSphere>();
+        if (pms != null)
         {
-            sm.PlaySound(soundType);
+            FindObjectOfType<SoundManager>().PlaySound(soundType, clipIndex);
         }
     }
 }
