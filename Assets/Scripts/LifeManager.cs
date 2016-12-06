@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LifeManager : MonoBehaviour
 {
@@ -28,7 +29,9 @@ public class LifeManager : MonoBehaviour
     {
         if (Lives <= 0)
         {
-            Application.LoadLevel("OpeningScreen");
+            Keyring.ClearGlobalKeys();
+            ScoreKeeper.ClearGlobalScore();
+            SceneManager.LoadScene("OpeningScreen");
         }
     }
 

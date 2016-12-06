@@ -4,7 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class LoadOnTrigger : MonoBehaviour
 {
+    public string Trigger;
     public int LevelNumber;
+    Animation Spin;
+    Collider Character;
     // Use this for initialization
     void Start()
     {
@@ -18,6 +21,15 @@ public class LoadOnTrigger : MonoBehaviour
     }
     void OnTriggerEnter(Collider collider)
     {
+
+        StartCoroutine(VictorySpin(collider));
+      
+    }
+
+    IEnumerator VictorySpin(Collider collider) {
+        
+        
+        yield return new WaitForSeconds(10);
         SceneManager.LoadScene(LevelNumber);
     }
 }

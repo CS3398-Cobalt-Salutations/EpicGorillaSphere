@@ -25,18 +25,23 @@ public class SoundManager : MonoBehaviour
         if (source == null) throw new Exception();
     }
 
-    public void PlaySound(SoundType type)
+    /// <summary>
+    /// Plays the specified sound.
+    /// </summary>
+    /// <param name="type">The type of sound to play.</param>
+    /// <param name="index">The index of the specific sound in the SoundManager. A value of -1 chooses randomly.</param>
+    public void PlaySound(SoundType type, int index)
     {
         switch(type)
         {
             case SoundType.OnDeath:
-                PlayOnDeath();
+                PlayOnDeath(index);
                 break;
             case SoundType.OnVictory:
-                PlayOnVictory();
+                PlayOnVictory(index);
                 break;
             case SoundType.OnPickup:
-                PlayOnPickup();
+                PlayOnPickup(index);
                 break;
             default:
                 break;
