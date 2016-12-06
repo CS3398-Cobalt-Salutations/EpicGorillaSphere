@@ -13,16 +13,29 @@ public class RestartLevel : MonoBehaviour {
 	void Update () {
 	
 	}
+
     //Restarts Level to beginning
     public void Restart()
     {
+        StartCoroutine(FadeToRestart());
+    }
+
+    IEnumerator FadeToRestart()
+    {
         Time.timeScale = 1;
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
+        Keyring.ClearGlobalKeys();
+        ScoreKeeper.ClearGlobalScore();
     }
 
     public void restartAtLastCheckpoint()
     {
         //Maaaaaaybe?
+        PlayerMoveSphere[] pms = FindObjectsOfType<PlayerMoveSphere>();
+        foreach (PlayerMoveSphere p in pms)
+        {
+            SaveAndLoad.LoadState(p);
+        }
     }
 }

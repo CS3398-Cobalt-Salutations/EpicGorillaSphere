@@ -6,11 +6,13 @@ public class ScoreKeeper : MonoBehaviour
 {
     public Text scoreText;
 
+    private int availableScore;
     private int personalScore;
     private static int globalScore;
     
     void Start()
     {
+        availableScore = GameObject.FindObjectsOfType<Collectible>().Length;
         personalScore = 0;
         UpdateScoreDisplay();
     }
@@ -30,6 +32,11 @@ public class ScoreKeeper : MonoBehaviour
         }
     }
 
+    public static void ClearGlobalScore()
+    {
+        globalScore = 0;
+    }
+
     public int GetPersonalScore()
     {
         return personalScore;
@@ -44,7 +51,7 @@ public class ScoreKeeper : MonoBehaviour
     private void UpdateScoreDisplay()
     {
         if (scoreText == null) return;
-        scoreText.text = "Score: " + CombinedScore.ToString();
+        scoreText.text = "Score: " + CombinedScore.ToString() + " / " + availableScore.ToString();
     }
 
     public int CombinedScore { get { return personalScore + globalScore; } }

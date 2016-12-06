@@ -377,7 +377,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Start Single Player
+  m_Text: Start Game
 --- !u!222 &150517082
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3585,7 +3585,7 @@ GameObject:
   - 95: {fileID: 1558729485}
   - 114: {fileID: 1558729486}
   m_Layer: 5
-  m_Name: Start Multiplayer
+  m_Name: Level Select
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4358,7 +4358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Start Multiplayer
+  m_Text: Level Select
 --- !u!222 &1898411524
 CanvasRenderer:
   m_ObjectHideFlags: 0

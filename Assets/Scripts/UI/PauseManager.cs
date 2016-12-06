@@ -1,14 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+[RequireComponent(typeof(AudioSource))]
 public class PauseManager : MonoBehaviour {
 
- 
+
+    
     public GameObject panel; //panel is the Pause Menu
     //GameObject player;
     public MonoBehaviour[] Scripts;
-
+    
     bool paused = false;
+    
 
     // Use this for initialization
     void Start() {
@@ -27,6 +29,8 @@ public class PauseManager : MonoBehaviour {
                 // player = GameObject.Find("PlayerBall");
                 Time.timeScale = 0;
                 panel.gameObject.SetActive(true);
+                AudioSource Pause = GetComponent<AudioSource> ();
+                Pause.Play();
 
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
