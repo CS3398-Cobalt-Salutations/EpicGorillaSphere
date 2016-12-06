@@ -30,3 +30,5 @@ obj/
 ehthumbs.db
 Thumbs.db
 *.meta
+Assets/Scenes/Teleporter Maze.unity
+Assets/Scenes/Tutorial Level.unity
