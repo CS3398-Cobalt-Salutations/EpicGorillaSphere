@@ -56,6 +56,7 @@ We currently have no plans to update Epic Gorilla Sphere. If you wish to make ch
 ## Authors
 
 * **Dillon Lohr** - *Worked on a bit of everything* - [djl70](https://github.com/djl70)
+* **Mitchell LaRocca** - [mjl71](https://github.com/mjl71)
 
 ## License
 
