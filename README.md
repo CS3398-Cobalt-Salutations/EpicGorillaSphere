@@ -33,7 +33,7 @@ Additional help can be found [on Unity's website](https://unity3d.com/learn), wh
 
 ## Deployment
 
-To build the project, first follow the steps in the **Editing the Project** section to open the project in Unity. Then follow these steps:
+To build the project, first follow the steps in the [**Editing the Project**](https://github.com/CS3398-Cobalt-Salutations/EpicGorillaSphere#editing-the-project) section to open the project in Unity. Then follow these steps:
 
 0. Open the EpicGorillaSphere project in Unity.
 1. Select *File > Build Settings* in the toolbar at the top of the Unity Editor.
