@@ -19,7 +19,7 @@ To play the game, simply:
 ### Editing the Project
 
 In order to edit Epic Gorilla Sphere on your local machine, you will first need to download and install the latest version of [Unity 3D](https://unity3d.com/get-unity/download).
-[As of writing, the most up-to-date version of Unity is 5.5.0, which was released on Nov. 30, 2016. However, Epic Gorilla Sphere's development was done on Unity 5.4.3.]
+>As of writing, the most up-to-date version of Unity is 5.5.0, which was released on Nov. 30, 2016. However, Epic Gorilla Sphere's development was done on Unity 5.4.3.
 
 0. Install [Unity 3D](https://unity3d.com/get-unity/download).
 1. Once installed, clone or download the EpicGorillaSphere project from [the project's GitHub page](https://github.com/CS3398-Cobalt-Salutations/EpicGorillaSphere).
@@ -43,7 +43,7 @@ To build the project, first follow the steps in the [**Editing the Project**](ht
 5. Enter a name for the executable and select *Save*.
 
 There will now be an executable file (e.g., "MyBuild.exe") and a corresponding data folder (e.g., "MyBuild_Data"). The end-user only needs these two items to run the game; Unity does not need to be installed in order to run the executable.
-[Note: Building for different target platforms will probably create different types of files.]
+>Note: Building for different target platforms will probably create different types of files.
 
 ## Built With
 
