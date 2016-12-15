@@ -1,0 +1,47 @@
+Initialize engine version: 5.4.3f1 (01f4c123905a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GPU (ID=0x134b)
+    Vendor:   NVIDIA
+    VRAM:     996 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.048 seconds
+Platform assembly: C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\dillo\OneDrive\Documents\EpicGorillaSphere\FinalDemo_Data\Managed\System.dll (this message is harmless)
+desktop: 3000x2000 60Hz; virtual: 3000x2000 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.697617 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 22c0 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.454760 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 653.
+Total: 0.594050 ms (FindLiveObjects: 0.041572 ms CreateObjectMapping: 0.035373 ms MarkObjects: 0.462768 ms  DeleteObjects: 0.053971 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.487860 ms
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1761.
+Total: 0.778574 ms (FindLiveObjects: 0.090803 ms CreateObjectMapping: 0.045948 ms MarkObjects: 0.467144 ms  DeleteObjects: 0.173583 ms)
+
+Rotation quaternions must be unit length.
+ 
+(Filename:  Line: 1302)
+

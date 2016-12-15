@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: leafs
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 93743cb6ad66f1f4daa495d9b7bebd41, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -83,6 +83,9 @@ Material:
         name: _DstBlend
       second: 0
     - first:
+        name: _FORWARD_RENDERING_LABEL
+      second: 0
+    - first:
         name: _GlossMapScale
       second: 1
     - first:
@@ -91,6 +94,9 @@ Material:
     - first:
         name: _GlossyReflections
       second: 1
+    - first:
+        name: _LowPolyLightID
+      second: 0
     - first:
         name: _Metallic
       second: 0
@@ -101,8 +107,26 @@ Material:
         name: _OcclusionStrength
       second: 1
     - first:
+        name: _PIXEL_LABEL
+      second: 0
+    - first:
         name: _Parallax
       second: 0.02
+    - first:
+        name: _REFLECTION_LABEL
+      second: 0
+    - first:
+        name: _RENDERING_MODE_LABEL
+      second: 0
+    - first:
+        name: _SHADER_TYPE_LABEL
+      second: 0
+    - first:
+        name: _SPECULAR_LABEL
+      second: 0
+    - first:
+        name: _SamplingType
+      second: 0
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -114,6 +138,9 @@ Material:
       second: 1
     - first:
         name: _UVSec
+      second: 0
+    - first:
+        name: _VERTEX_LABEL
       second: 0
     - first:
         name: _ZWrite
