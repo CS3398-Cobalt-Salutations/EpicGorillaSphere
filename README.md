@@ -61,6 +61,7 @@ We currently have no plans to update Epic Gorilla Sphere. If you wish to make ch
 * **Nathan Hellrung** - [nmh46](https://github.com/nmh46)
 * **Aaron Laurence** - [apl14](http://github.com/apl14)
 * **Douglas Pitt** - [d_p113](https://github.com/dp113)
+* **Colin Sawyer** - [cns27](https://github.com/cns27)
 
 ## License
 
