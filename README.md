@@ -58,9 +58,10 @@ We currently have no plans to update Epic Gorilla Sphere. If you wish to make ch
 * **Dillon Lohr** - [djl70](https://github.com/djl70)
 * **Mitchell LaRocca** - [mjl71](https://github.com/mjl71)
 * **Stephen Phipps** - [s_p272 or DustyGreen64](https://github.com/DustyGreen64)
-* **Natahn Hellrung** - [nmh46](https://github.com/nmh46)
+* **Nathan Hellrung** - [nmh46](https://github.com/nmh46)
 * **Aaron Laurence** - [apl14](http://github.com/apl14)
 * **Douglas Pitt** - [d_p113](https://github.com/dp113)
+
 ## License
 
 This project does not have a license, meaning default copyright laws apply. More information can be found [here](https://help.github.com/articles/open-source-licensing/).
