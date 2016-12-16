@@ -59,6 +59,7 @@ We currently have no plans to update Epic Gorilla Sphere. If you wish to make ch
 * **Mitchell LaRocca** - [mjl71](https://github.com/mjl71)
 * **Stephen Phipps** - [s_p272 or DustyGreen64](https://github.com/DustyGreen64)
 * **Natahn Hellrung** - [nmh46](https://github.com/nmh46)
+* **Aaron Laurence** - [apl14](http://github.com/apl14)
 
 ## License
 
